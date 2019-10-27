@@ -1,0 +1,24 @@
+{
+  "name": "students",
+  "version": "1.0.0",
+  "description": "student service",
+  "author": "bmad",
+  "license": "ISC",
+  "dependencies": {
+    "@types/async": "^3.0.3",
+    "@types/aws-lambda": "^8.10.17",
+    "@types/node": "^10.12.18",
+    "async": "^3.1.0",
+    "aws-sdk": "^2.556.0",
+    "serverless": "^1.55.1",
+    "serverless-plugin-typescript": "^1.1.9",
+    "serverless-webpack": "^5.2.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.4",
+    "webpack": "^4.29.0"
+  },
+  "devDependencies": {
+    "serverless-dotenv-plugin": "^2.1.1",
+    "serverless-offline": "^5.12.0"
+  }
+}
