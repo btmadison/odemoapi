@@ -1,6 +1,8 @@
 # ODemo Resources
 
-### NOTE: For the Demo Application, everything can be run locally and none of this would be necessary - see notes in the svcs repo for - this is just for example purposes of scaffolding for various environmental resources and sharing of resource with the other repos services as needed.
+### NOTE
+
+For the Demo Application, everything must be run locally with the `sls offline` command.
 
 ## Overview
 
@@ -14,11 +16,17 @@ In this mono-repo hybrid structure, there are 2 - 3 repos (3 if keeping the app 
 
 ## Development Environment Setup
 
-Minimally to operate with this you will need the following set up for your environment:
-
 - [Node JS 10.X installation instructions](https://nodejs.org/en/download/package-manager/) for various environments
 - [AWS CLI Installation Instructions](https://docs.amazonaws.cn/en_us/cli/latest/userguide/cli-chap-install.html) for various environments - after complet run `aws configure`
 - [Serverless Framework Installation Instructions](https://serverless.com/framework/docs/getting-started/) for various environments and additonally [Set up your AWS Credentials for Serverless](https://serverless.com/framework/docs/providers/aws/cli-reference/config-credentials/)
+
+### Demo API Execution Note
+
+aws cli configuration may be unnecessary for this demo as you should just run `sls offline'. The following documentation would remain, but for now you can following the folling bulleted items and stop at that point to get the local services running:
+
+- npm install at / and again at /services/students-api
+- make sure you have a .env file configured at /services/students-api/.env - the file should contain: `MOCK_STUDENT_DATA_FILE='./tmp/students.json'` (some code changes are need to use the tmp folder properly when running from lambda, this will run fine now for local windows cmd or bash dev)
+- navigate to /services/students-api and run the command `sls offline` - the api should start with some logging output that it is running on http://localhost:3000/students - if it is different, update the address in the app project environment.ts file for ui local run.
 
 ### Environment Variables
 
