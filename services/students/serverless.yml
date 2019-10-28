@@ -19,13 +19,13 @@ plugins:
   - serverless-dotenv-plugin
 
 functions:
-  list-students:
+  students-list:
     handler: src/api/list.handler
     events:
       - http:
           method: get
           path: students
-  get-student:
+  students-get:
     handler: src/api/get.handler
     events:
       - http:
