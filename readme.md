@@ -59,8 +59,8 @@ From the /services/students-api root, run the command `sls deploy' - if you have
 
 ## Testing
 
-Unit Tests can be run from the root of the demo svc's repository with the command `npx jest`, unit tests lit next to their counterpart ts files, names \*.test.ts.
+Unit Tests can be run from the root of the demo svc's repository with the command `npx jest`, unit tests live next to their counterpart ts files, named .test.ts.
 
-Integration Tests are under the specific services /integration folder
+Integration Tests will be under the specific services /integration folder
 
 The text-mocks folder is used to create json payloads for testing locally against deployed services (after running sls deploy, instead of running sls offline, tests can be run from the command line with `serverless invoke local --function functionName --data ./test-mocks/some.json` command)
