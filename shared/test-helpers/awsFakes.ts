@@ -1,4 +1,4 @@
-export const fakeProxy = {
+export const fakeEvent = {
   body: null,
   headers: null,
   multiValueHeaders: null,
