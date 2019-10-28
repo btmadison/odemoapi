@@ -1,7 +1,0 @@
-{
-  "pathParameters": {},
-  "queryParameters": {
-    "name": "Smith"
-  },
-  "requestContext": {}
-}

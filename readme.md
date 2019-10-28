@@ -56,3 +56,11 @@ Various Cloud Services, such as DynamoDB can be emulated with a plugin to make o
 ## Deployment
 
 From the /services/students-api root, run the command `sls deploy' - if you have properly configured your aws account and serverless framework account, the application will upload the functions. Utilise region and stage flags for different regions and stages, for example:`sls deploy -s dev -r us-east-1` will create the api gateway and necessary resources with a dev stage in the us-east-1 region. These settings are also the default settings currently.
+
+## Testing
+
+Unit Tests can be run from the root of the demo svc's repository with the command `npx jest`, unit tests lit next to their counterpart ts files, names \*.test.ts.
+
+Integration Tests are under the specific services /integration folder
+
+The text-mocks folder is used to create json payloads for testing locally against deployed services (after running sls deploy, instead of running sls offline, tests can be run from the command line with `serverless invoke local --function functionName --data ./test-mocks/some.json` command)
